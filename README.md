@@ -2,6 +2,12 @@
 
 零依赖的静态站点。原作品集模板改造版：保留结构与配色，把 `#skills` 平铺标签换成可拖拽旋转的 3D 技能星云球。
 
+## 在线访问
+
+GitHub Pages：<https://asitakwa.github.io/skills-3d/>
+
+推送到 `main` 分支后，GitHub Actions 会自动重新部署网站。
+
 ## 在 VS Code 里打开的三种方式
 
 ### 方式一：双击 workspace 文件（推荐）
