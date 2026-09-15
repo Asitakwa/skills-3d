@@ -4,7 +4,7 @@ const portfolio = {
     title: "Media Operations Manager",
     availability: "Graduate student",
     location: "Hong Kong",
-    email: "adrian.reynolds@email.com",
+    email: "524679116@qq.com",
     bio: "I graduated with a bachelor's degree in Arts Management from Sichuan University of Media and Communications, and I have 2.5 years of experience in content operations and content safety at Bilibili. I'm good at analyzing content data and coming up with strategies to boost user engagement."
   },
   experience: [
@@ -16,8 +16,7 @@ const portfolio = {
     ] }
   ],
   projects: [
-    { title: "E-commerce Platform", type: "Web Application", date: "2025-06-25", status: "Live", symbol: "< />", description: "A full-featured e-commerce platform with a custom CMS, payment gateway integration, and a recommendation engine. Built with a microservices architecture.", tags: ["Next.js", "TypeScript", "Stripe", "GraphQL"], website: "https://www.aptifolio.com", github: "https://github.com" },
-    { title: "Analytics Dashboard", type: "Web Application", date: "2026-03-16", status: "Complete", symbol: "{ }", description: "A real-time analytics dashboard for product teams to monitor customer behavior and business metrics.", tags: ["React", "Node.js", "PostgreSQL", "Docker"], website: "https://www.aptifolio.com" }
+    { title: "Community Operations", type: "Web Application", date: "2022.7.9-2024.12", status: "Live", image: "project-cover.png", symbol: "< />", description: "Operations team live analysis dashboard, used to monitor customer behavior and business metrics.", tags: [] }
   ],
   education: [
     { school: "Lingnan University", dates: "2026-Present", degree: "Master of Science in Art, Technology, and Business" },
@@ -56,7 +55,17 @@ portfolio.experience.forEach((item) => {
 const projectList = $("#project-list");
 portfolio.projects.forEach((item) => {
   const card = create("article", "project-card");
-  card.innerHTML = `<div class="project-cover">${item.symbol}</div><span class="project-status">${item.status}</span><div class="card-meta"><span>${item.type}</span><span>${item.date}</span></div><h3>${item.title}</h3><p class="project-description">${item.description}</p>`;
+  const cover = create("div", "project-cover");
+  const img = create("img");
+  img.src = item.image || "";
+  img.alt = `${item.title} project cover`;
+  if (item.image) cover.append(img);
+  if (!item.image) cover.textContent = item.symbol || "";
+  const meta = create("div", "card-meta");
+  meta.append(create("span", "", item.type), create("span", "", item.date));
+  card.append(cover, meta);
+  const title = create("h3", "", item.title); card.append(title);
+  const desc = create("p", "project-description", item.description); card.append(desc);
   const tags = create("div", "tags"); item.tags.forEach((tag) => tags.append(create("span", "", tag))); card.append(tags);
   const links = create("div", "project-links");
   [["Website", item.website], ["GitHub", item.github]].forEach((pair) => { if (!pair[1]) return; const link = create("a", "", pair[0]); link.href = pair[1]; link.target = "_blank"; link.rel = "noreferrer"; links.append(link); });

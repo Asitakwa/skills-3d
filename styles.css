@@ -62,7 +62,8 @@ code { color: var(--text); }
 .card-meta span:last-child { text-align: right; }
 ul { margin: 12px 0 0; padding-left: 20px; color: var(--muted); }
 .project-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
-.project-cover { display: grid; place-items: center; height: 130px; margin: -22px -22px 20px; background: radial-gradient(circle at 30% 30%, rgba(0,255,170,.25), transparent 50%), #081410; color: var(--text); font-size: 30px; }
+.project-cover { display: grid; place-items: center; height: 130px; margin: -22px -22px 20px; background: radial-gradient(circle at 30% 30%, rgba(0,255,170,.25), transparent 50%), #081410; color: var(--text); font-size: 30px; overflow: hidden; }
+.project-cover img { display: block; width: 100%; height: 100%; object-fit: cover; }
 .project-status { display: inline-block; margin-bottom: 14px; padding: 2px 8px; border: 1px solid var(--line); color: var(--text); font-size: 11px; text-transform: uppercase; }
 .project-description { color: var(--muted); }
 .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 16px; }
