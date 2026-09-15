@@ -1,0 +1,25 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "chrome",
+      "name": "Open in Chrome (file://, no server)",
+      "request": "launch",
+      "file": "${workspaceFolder}/index.html"
+    },
+    {
+      "type": "chrome",
+      "name": "Open in Chrome via Live Server (5500)",
+      "request": "launch",
+      "url": "http://localhost:5500/index.html",
+      "webRoot": "${workspaceFolder}"
+    },
+    {
+      "type": "chrome",
+      "name": "Open in Edge (file://, no server)",
+      "request": "launch",
+      "file": "${workspaceFolder}/index.html",
+      "runtimeExecutable": "msedge"
+    }
+  ]
+}

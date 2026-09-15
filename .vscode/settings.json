@@ -1,0 +1,11 @@
+{
+  "liveServer.settings.port": 5500,
+  "liveServer.settings.root": "/",
+  "liveServer.settings.CustomBrowser": "chrome",
+  "liveServer.settings.NoBrowser": false,
+  "liveServer.settings.ignoreFiles": [".vscode/**", ".workbuddy/**"],
+  "files.autoSave": "afterDelay",
+  "files.exclude": { "**/.workbuddy": true },
+  "editor.formatOnSave": true,
+  "editor.tabSize": 2
+}

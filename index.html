@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Developer portfolio with an interactive 3D skill nebula." />
+    <title>Zhang Ruimiao | Media Operations Manager</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="firefly-layer" aria-hidden="true">
+      <i class="firefly firefly-1"></i>
+      <i class="firefly firefly-2"></i>
+      <i class="firefly firefly-3"></i>
+      <i class="firefly firefly-4"></i>
+      <i class="firefly firefly-5"></i>
+      <i class="firefly firefly-6"></i>
+      <i class="firefly firefly-7"></i>
+      <i class="firefly firefly-8"></i>
+      <i class="firefly firefly-9"></i>
+      <i class="firefly firefly-10"></i>
+      <i class="firefly firefly-11"></i>
+      <i class="firefly firefly-12"></i>
+    </div>
+    <div class="site-shell">
+      <aside class="profile-panel" aria-label="Profile">
+        <div class="profile-top">
+          <div class="avatar" aria-label="Zhang Ruimiao">
+            <img src="avatar.png" alt="Zhang Ruimiao" />
+          </div>
+          <h1 data-profile="name">Zhang Ruimiao</h1>
+          <p class="role" data-profile="title">Media Operations Manager</p>
+          <p class="availability"><span class="status-dot"></span><span data-profile="availability">Graduate student</span></p>
+          <p class="location"><span aria-hidden="true">+</span> <span data-profile="location">Hong Kong</span></p>
+        </div>
+
+        <nav class="section-nav" aria-label="In-page jump links">
+          <a href="#about">About</a>
+          <a href="#experience">Experience</a>
+          <a href="#projects">Projects</a>
+          <a href="#education">Education</a>
+          <a href="#skills">Skills</a>
+        </nav>
+
+        <div class="social-links" aria-label="Social media">
+          <a href="https://github.com/" target="_blank" rel="noreferrer">GitHub</a>
+          <button type="button" data-copy="https://github.com/" aria-label="Copy GitHub URL">Copy</button>
+          <a href="https://linkedin.com/in/" target="_blank" rel="noreferrer">LinkedIn</a>
+          <button type="button" data-copy="https://linkedin.com/in/" aria-label="Copy LinkedIn URL">Copy</button>
+          <a data-profile-link="email" href="mailto:adrian.reynolds@email.com">Email</a>
+          <button type="button" data-copy="adrian.reynolds@email.com" aria-label="Copy email">Copy</button>
+        </div>
+      </aside>
+
+      <main class="content">
+        <section id="about" class="section">
+          <div class="section-heading"><h2>About</h2></div>
+          <p class="lead" data-profile="bio"></p>
+        </section>
+
+        <section id="experience" class="section">
+          <div class="section-heading"><h2>Experience</h2></div>
+          <div id="experience-list" class="timeline-list"></div>
+        </section>
+
+        <section id="projects" class="section">
+          <div class="section-heading"><h2>Projects</h2><span class="count" id="project-count"></span></div>
+          <div id="project-list" class="project-grid"></div>
+        </section>
+
+        <section id="education" class="section">
+          <div class="section-heading"><h2>Education</h2></div>
+          <div id="education-list" class="education-list"></div>
+        </section>
+
+        <section id="skills" class="section">
+          <div class="section-heading"><h2>Skills</h2><span class="count" id="skill-count"></span></div>
+
+          <div class="skill-stage" id="skill-stage">
+            <canvas id="skill-canvas" aria-hidden="true"></canvas>
+            <p class="skill-hint">Drag to rotate &middot; hover to inspect &middot; click for detail</p>
+
+            <div class="skill-detail" id="skill-detail" role="status" aria-live="polite" hidden>
+              <span class="skill-detail-cat" id="skill-detail-cat"></span>
+              <h3 id="skill-detail-name"></h3>
+              <p id="skill-detail-note"></p>
+              <button type="button" id="skill-detail-close" aria-label="Close skill detail">Close</button>
+            </div>
+          </div>
+
+          <ul class="skill-index" id="skill-index" aria-label="Skill list, selectable"></ul>
+        </section>
+
+      </main>
+    </div>
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+    <script src="script.js"></script>
+  </body>
+</html>
